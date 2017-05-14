@@ -1,3 +1,5 @@
+import { SET_YEAR } from '../constants/page'
+
 const initialState = {
   year: 2017,
   currencies: []
@@ -5,7 +7,7 @@ const initialState = {
 
 export default function page(state = initialState, action){
   console.log(state);
-  if(action.type === 'SET_YEAR'){
+  if(action.type === SET_YEAR){
     return { ...state, year: action.payload }
   }
 
