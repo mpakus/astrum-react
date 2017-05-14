@@ -1,22 +1,18 @@
-import { SET_YEAR } from '../constants/page'
+import { GET_CURRENCIES_REQUEST, GET_CURRENCIES_SUCCESS } from '../constants/page'
 
 const initialState = {
   year: 2017,
-  currencies: []
+  currencies: [],
+  fetching: false
 };
 
-export default function page(state = initialState, action){
-  console.log(state);
-  if(action.type === SET_YEAR){
-    return { ...state, year: action.payload }
+export default function page(state = initialState, action) {
+  if (action.type === GET_CURRENCIES_REQUEST) {
+    return {...state, year: action.payload, fetching: true}
   }
 
+  if (action.type === GET_CURRENCIES_SUCCESS) {
+    return {...state, currencies: action.payload, fetching: false}
+  }
   return state;
-  // switch(action.type){
-  //   case 'SET_YEAR':
-  //     return
-  //   default:
-  //     return state
-  // }
-  // return state;
 }
