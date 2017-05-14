@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import User from '../../components/user';
+import Page from '../../components/page';
 import './index.css';
 
 class App extends Component {
   render() {
-    const { name: user_name, email: user_email } = this.props.user;
-    const { year: page_year, currencies: page_currencies } = this.props.page;
+    const { user, page } = this.props;
     return (
-      <div className="App">
-        <p>
-          Hello { user_name } | { user_email }
-        </p>
-        <p>
-          Year { page_year } | { page_currencies }
-        </p>
-
+      <div>
+        <User name={user.name} email={user.email} />
+        <Page currencies={page.currencies} year={page.year} />
       </div>
     );
   }
