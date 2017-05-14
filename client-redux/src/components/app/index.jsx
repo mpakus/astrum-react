@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <p className="App-intro">
-          Hello { this.props.user }
+          Hello { this.props.user.name } | { this.props.user.email }
         </p>
       </div>
     );
