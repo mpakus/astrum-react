@@ -1,0 +1,17 @@
+{
+  "name": "RNHooks",
+  "displayName": "RNHooks",
+  "expo": {
+    "name": "RNHooks",
+    "slug": "RNHooks",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
